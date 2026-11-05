@@ -26,6 +26,26 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.font_style_title{
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: clamp(28px, 4vw, 30px);
+}
+/* globals.css */
+.font_style_header {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+
+
 /* ================================ */
 
 

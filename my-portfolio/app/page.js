@@ -87,16 +87,12 @@ function HomeContent() {
           {/* EXPERIENCE */}
           {/* ========================= */}
           <div className={styles.Experience_overview}>
-            <h1>Experience</h1>
+            <h1 className={`font_style_title`}>Experience</h1>
             <hr/>
-            <h4>2026 - Full-Stack Web Developer</h4>
-            <p></p>
-            <hr/>
-            <h4>2025 - UI/UX Designer</h4>
-            <hr/>
-            <h4>2020 - Graphic Designer</h4>
-            <hr/>
-            <h4>2021 - Game Developer</h4>
+            <h4 className={`font_style_header`}> Full-Stack Web Developer</h4>
+            <h4 className={`font_style_header`}>UI/UX Designer</h4>
+            <h4 className={`font_style_header`}>Graphic Designer</h4>
+            <h4 className={`font_style_header`}>Game Developer</h4>
           </div>
 
           <br/>
@@ -105,7 +101,7 @@ function HomeContent() {
           {/* TECH STACK */}
           {/* ========================= */}
           <div className={styles.tech_stack_overview}>
-            <legend><h1>Tech Stack</h1></legend>
+            <legend><h1 className={`font_style_title`}>Tech Stack</h1></legend>
 
             <div className={styles.stack_container01}>
 
@@ -139,18 +135,6 @@ function HomeContent() {
 
           <br/>
 
-          {/* ========================= */}
-          {/* VIEW MORE */}
-          {/* ========================= */}
-          <div className={styles.view_more_01}>
-            <a
-              href="#"
-              targer="_blank"
-              rel="noopen noreferrer"
-            >
-              View More <span className={styles.arrow}>→</span>
-            </a>
-          </div>
 
           <br/>
         </section>
