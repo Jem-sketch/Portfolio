@@ -32,7 +32,7 @@
 /* ========================= */
 
 .light {
-  --background: #ffffff;
+  --background: #e2e2e2;
   --text: #000000;
 
   /* Black static grid */
@@ -395,16 +395,22 @@
 }
 
 
-
 /* ========================= */
 /* ABOUT */
 /* ========================= */
 
 .About_Preview {
-  position: sticky;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+
+  margin: 0 auto;
+  position: relative;
   width: 100%;
   min-height: 100vh;
+
 
   background-color: var(--background);
   color: var(--text);
@@ -412,19 +418,82 @@
   z-index: 2;
 }
 
+
+/* ========================= */
+/* EXPERIENCE OVERVIEW */
+/* ========================= */
+
+.Experience_overview{
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.Experience_overview hr {
+  height: 1.1px;
+  opacity: 0.5;
+  border: none;                  /* Removes default browser border styling */
+  background-color: var(--text); /* Uses your text theme color */
+  margin: 1rem 0; 
+
+  background: linear-gradient(
+      90deg, 
+      transparent 0%, 
+      var(--text) 15%, 
+      var(--text) 85%, 
+      transparent 100%
+    );               /* Adds vertical spacing around dividers */
+}
+
+/* ========================= */
+/* TECH STACK OVERVIEW */
+/* ========================= */
+
+.tech_stack_overview {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+/* Container holding all tech stack items */
+.stack_container01 {
+  display: flex;
+  flex-wrap: wrap;       /* Allows icons to wrap to the next line on mobile */
+  justify-content: center; /* Centers the whole group */
+  gap: 2rem;            /* Spacing between each tech item */
+  margin-top: 1.5rem;
+}
+
+
+/* Individual tech stack box (logo on top, label below) */
+.stack01,
+.stack02,
+.stack03,
+.stack04,
+.stack05 {
+  display: flex;
+  flex-direction: column; /* Stacks image above text */
+  align-items: center;    /* Centers image and text horizontally */
+  gap: 0.5rem;           /* Spacing between image and text */
+}
+
+/* Set size for images */
+.stack_container01 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
 /* ========================= */
 /* Project */
 /* ========================= */
 
 .Project_Preview{
-  position: sticky;
-  top: 0;
+  position: relative;
   width: 100%;
   min-height: 100vh;
-
   background-color: var(--background);
   color: var(--text);
-
   z-index: 3;
 }
 /* ========================= */
