@@ -52,15 +52,21 @@
 
 
 /* ==== REUSABLE VARIABLE CSS ==== */
+
 :root {
     --background: rgb(15, 15, 15);
     --foreground: #e8e8ea;
+    --button-shadow: 0 8px 20px rgba(5, 5, 5, 0.281);
+    --button-fill: #ffffff;      /* Dark Mode: fills with white */
+    --button-hover-text: #000000;/* Text turns black so it stays visible on white fill */
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --background: white;
         --foreground: black;
+        --button-fill: #000000;      /* Light Mode: fills with black */
+        --button-hover-text: #ffffff;/* Text turns white so it stays visible on black fill */
     }
 }
 /* ================================ */

@@ -9,6 +9,12 @@ export function ThemeProvider({ children }) {
   const [darkmode, setDarkmode] = useState(true);
   const transitionRef = useRef(null);
 
+  // FOR BUTTON COOL DOWN {black,4}
+  //==========================
+  // FOR BUTTON COOL DOWN
+  //==========================
+  const isCooldownRef = useRef(false)
+
 
   useEffect(() => {
     let forward = null;
@@ -22,7 +28,6 @@ export function ThemeProvider({ children }) {
       clearTimeout(timer);
       timer = setTimeout(() => (forward = null), 400);
 
-      transitionRef.current.skipTransition();
       transitionRef.current = null;
     };
 
@@ -61,6 +66,10 @@ export function ThemeProvider({ children }) {
   }, []);
 
   const toggleTheme = (event) => {
+    
+    if (isCooldownRef.current) return;
+    isCooldownRef.current = true;
+
     const root = document.documentElement;
 
     const x = event?.clientX ?? window.innerWidth - 30;
@@ -80,6 +89,10 @@ export function ThemeProvider({ children }) {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       updateTheme();
+
+      setTimeout(() => {
+        isCooldownRef.current = false;
+      }, 300);
       return;
     }
 
@@ -88,8 +101,10 @@ export function ThemeProvider({ children }) {
 
     transition.finished.finally(() => {
       if (transitionRef.current === transition) {
+        
         transitionRef.current = null;
       }
+        isCooldownRef.current = false;
     });
   };
 

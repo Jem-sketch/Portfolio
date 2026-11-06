@@ -13,7 +13,7 @@
     color 0.3s ease;
 }
 
-
+/*THEME SECTION  {black,3}*/
 /* ========================= */
 /* DARK THEME */
 /* ========================= */
@@ -105,9 +105,9 @@
   z-index: 0;
 }
 
-
+/*PROFILE SECTION  {violet,3}*/
 /* ========================= */
-/* CONTENT */
+/* PROFILE OVERVIEW */
 /* ========================= */
 
 .profile {
@@ -314,89 +314,10 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
+
+/*ABOUT SECTION  {violet,3}*/
 /* ========================= */
-/* RESPONSIVE MEDIA */
-/* ========================= */
-
-/* TABLET */
-@media (max-width: 900px) {
-  .profile {
-    gap: 20px;
-    width: min(80%, 900px);
-  }
-
-  .profile_description h1 {
-    letter-spacing: 10px;
-  }
-}
-
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile_image {
-    width: clamp(150px, 55vw, 220px);
-  }
-
-  .profile_description {
-    max-width: 80%;
-  }
-
-  .profile_description h1 {
-    font-size: clamp(24px, 8vw, 36px);
-    letter-spacing: clamp(3px, 1vw, 8px);
-  }
-
-  .profile_description p {
-    font-size: clamp(13px, 3.5vw, 16px);
-  }
-
-  .social_media {
-    padding: 15px;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .statistical_container {
-    margin-top: clamp(40px, 5vw, 30px);
-    gap: clamp(30px, 5vw, 30px);
-    padding: 15px 20px;
-    width: clamp(150px, 55vw, 220px);
-  }
-
-  .statistical_container p{
-    font-size: clamp(13px, 3.5vw, 16px);
-  }
-
-  .stat:not(:first-child)::before {
-    left: -15px;
-  }
-}
-
-
-/* SMALL MOBILE */
-@media (max-width: 400px) {
-  .profile {
-    padding: 15px;
-    gap: 20px;
-  }
-
-  .statistical_container {
-    gap: 12px;
-  }
-
-  .stat:not(:first-child)::before {
-    left: -8px;
-  }
-}
-
-
-/* ========================= */
-/* ABOUT */
+/* ABOUT OVERVIEW */
 /* ========================= */
 
 .About_Preview {
@@ -404,7 +325,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 900px;
+
 
   margin: 0 auto;
   position: relative;
@@ -484,18 +405,143 @@
 }
 
 
+
+
+
+/*PROJECT SECTION  {violet,3}*/
 /* ========================= */
 /* Project */
 /* ========================= */
 
 .Project_Preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  padding-bottom: 80px;
+
   background-color: var(--background);
   color: var(--text);
+
   z-index: 3;
 }
+/* Container for the whole section */
+.project_overview {
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  gap: 60px; /* <--- This automatically adds clean, equal space between EVERY project card! */
+}
+
+/* A wrapper card for each individual project */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.status_Dot {
+  display: inline-block;
+  width: 8px;              /* Size of the circle */
+  height: 8px;             /* Must match width to be a circle */
+  background-color: #22c55e; /* Green color (or change to your preferred color) */
+  border-radius: 50%;      /* Turns the square into a circle */
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); /* Initial glow shadow */
+  animation: shinePulse 1.5s infinite;        /* Applies the shining animation */
+  margin-right: 10px;
+}
+
+/* Keyframes to create the pulsing / shining effect */
+@keyframes shinePulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); /* Expands the glowing ring outward */
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.view_Link {
+  position: relative;          
+  overflow: hidden;            
+  z-index: 1;                  
+  margin: 10px;
+  padding: 8px 22px;
+  border-radius: 50px;
+  background-color: rgb(37, 37, 37);
+  color: var(--foreground);               /* Default button text color */
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s ease; 
+  box-shadow: none;            
+}
+
+/* Filling background layer */
+.view_Link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-fill); /* Fills with white in Dark Mode, black in Light Mode */
+  z-index: -1;                 
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  transform-origin: left;      
+  transform: scaleX(0);        
+}
+
+/* Hover state: changes text color to contrast against the fill background */
+.view_Link:hover {
+  color: var(--button-hover-text); 
+  box-shadow: var(--button-shadow);
+}
+
+.view_Link:hover::before {
+  transform: scaleX(1);      
+}
+
+
+.project_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.project_Image {
+  display: block;
+  margin: 16px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.project_Info {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project_Info h3,
+.project_Info p {
+  margin: 0;
+}
+
+
+/*RESPONSIVE SECTION  {black,3}*/
 /* ========================= */
 /* MOBILE */
 /* ========================= */
@@ -517,5 +563,86 @@
     height: 30px;
 
     font-size: 20px;
+  }
+}
+
+
+/* ========================= */
+/* RESPONSIVE MEDIA */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .profile {
+    gap: 20px;
+    width: min(80%, 900px);
+  }
+
+  .profile_description h1 {
+    letter-spacing: 10px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile_image {
+    width: clamp(150px, 55vw, 220px);
+  }
+
+  .profile_description {
+    max-width: 80%;
+  }
+
+  .profile_description h1 {
+    font-size: clamp(24px, 8vw, 36px);
+    letter-spacing: clamp(3px, 1vw, 8px);
+  }
+
+  .profile_description p {
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+
+  .social_media {
+    padding: 15px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .statistical_container {
+    margin-top: clamp(40px, 5vw, 30px);
+    gap: clamp(30px, 5vw, 30px);
+    padding: 15px 20px;
+    width: clamp(150px, 55vw, 220px);
+  }
+
+  .statistical_container p{
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+
+  .stat:not(:first-child)::before {
+    left: -15px;
+  }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+  .profile {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .statistical_container {
+    gap: 12px;
+  }
+
+  .stat:not(:first-child)::before {
+    left: -8px;
   }
 }
