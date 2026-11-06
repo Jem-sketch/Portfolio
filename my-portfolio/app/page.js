@@ -87,7 +87,7 @@ function HomeContent() {
           {/* EXPERIENCE */}
           {/* ========================= */}
           <div className={styles.Experience_overview}>
-            <h1 className={`font_style_title`}>Experience</h1>
+            <h1 className={`font_style_title`}>EXPERIENCE</h1>
             <hr/>
             <h4 className={`font_style_header`}> Full-Stack Web Developer</h4>
             <h4 className={`font_style_header`}>UI/UX Designer</h4>
@@ -133,10 +133,6 @@ function HomeContent() {
             </div>
           </div>
 
-          <br/>
-
-
-          <br/>
         </section>
 
 
@@ -145,92 +141,93 @@ function HomeContent() {
         {/* ========================= */}
 
         <section className={styles.Project_Preview}>
-
+          
+          <h1 className={`font_style_title`}>PROJECTS</h1>
+            
             <div className={styles.project_overview}>
-              <h1>Project</h1>
+              
 
               {/* ----- Project 01: Adventure Games ----- */}
-              <div className={styles.project01}>
+              <div className={styles.projectCard}>
                 <div className={styles.project_Header}>
-                  <span className={styles.project_Status}>
+                  <span className={`${styles.project_Status} font_style_header`}>
                     <span className={styles.status_Dot}></span>
                     Live
                   </span>
-
                   <a
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={styles.view_Link}
+                    className={`${styles.view_Link} font_style_header`}
                   >
                     View <span>→</span>
                   </a>
                 </div>
-              </div>
 
-              <div className={styles.project_Preview}>
+                <div className={styles.image_Container}>
+                  <img src="./sample images (1).jpg" alt="Project01" className={styles.project_Image} />
+                </div>
+
                 <div className={styles.project_Info}>
-                  <h3>Adventure Games</h3>
-                  <p><i>Academic Project</i></p>
+                  <h3 className={`font_style_header`}>Adventure Games</h3>
+                  <p className={`font_style_header`}><i>Academic Project</i></p>
                 </div>
               </div>
 
-              <br/>
-
               {/* ----- Project 02: JRB Website ----- */}
-              <div className={styles.project02}>
+              <div className={styles.projectCard}>
                 <div className={styles.project_Header}>
-                  <span className={styles.project_Status}>
+                  <span className={`${styles.project_Status} font_style_header`}>
                     <span className={styles.status_Dot}></span>
                     Live
                   </span>
-
                   <a
                     href="#"
                     target="_blank"
-                    rel="noopen noreferrer"
-                    className={styles.view_Link}
+                    rel="noopener noreferrer"
+                    className={`${styles.view_Link} font_style_header`}
                   >
                     View <span>→</span>
                   </a>
+                </div>
 
-                  <div className={styles.project_Preview}>
-                    <div className={styles.project_Info}>
-                      <h3>JRB Website</h3>
-                      <p><i>Architecte Website</i></p>
-                    </div>
-                  </div>
+                <div className={styles.image_Container}>
+                  <img src="./sample images (1).jpg" alt="Project02" className={styles.project_Image} />
+                </div>
+
+                <div className={styles.project_Info}>
+                  <h3 className={`font_style_header`}>JRB Website</h3>
+                  <p className={`font_style_header`}><i>Architecte Website</i></p>
                 </div>
               </div>
 
-            </div>
+              {/* ----- Project 03: Background Remover ----- */}
+              <div className={styles.projectCard}>
+                <div className={styles.project_Header}>
+                  <span className={`${styles.project_Status} font_style_header`}>
+                    <span className={styles.status_Dot}></span>
+                    Live
+                  </span>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.view_Link} font_style_header`}
+                  >
+                    View <span>→</span>
+                  </a>
+                </div>
 
-            <br/>
+                <div className={styles.image_Container}>
+                  <img src="./sample images (1).jpg" alt="Project03" className={styles.project_Image} />
+                </div>
 
-            {/* ----- Project 03: Background Remover ----- */}
-            <div className={styles.project03}>
-              <div className={styles.project_Header}>
-                <span className={styles.project_Status}>
-                  <span className={styles.status_Dot}></span>
-                  Live
-                </span>
-
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopen noreferrer"
-                  className={styles.view_Link}
-                >
-                  View <span>→</span>
-                </a>
-
-                <div className={styles.project_Preview}>
-                  <div className={styles.project_Info}>
-                    <h3>Background Remover</h3>
-                    <p><i>Background Image Remover</i></p>
-                  </div>
+                <div className={styles.project_Info}>
+                  <h3 className={`font_style_header`}>Background Remover</h3>
+                  <p className={`font_style_header`}><i>Background Image Remover</i></p>
                 </div>
               </div>
+
             </div>
         </section>
         
