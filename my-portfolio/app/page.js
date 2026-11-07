@@ -155,7 +155,7 @@ function HomeContent() {
         {/* PROJECTS */}
         {/* ========================= */}
 
-        <section className={styles.Project_Preview}>
+        <section className={styles.Project_Preview} draggable="false">
           
           <h1 className={`font_style_title`}>PROJECTS</h1>
             

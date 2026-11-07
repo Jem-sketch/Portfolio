@@ -428,6 +428,11 @@
   color: var(--text);
 
   z-index: 3;
+
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* Container for the whole section */
 .project_overview {
@@ -485,7 +490,9 @@
   cursor: pointer;
   display: inline-block;
   transition: color 0.3s ease; 
-  box-shadow: none;            
+  box-shadow: none;
+
+  -webkit-user-drag: none;
 }
 
 /* Filling background layer */
@@ -513,7 +520,6 @@
   transform: scaleX(1);      
 }
 
-
 .project_Header {
   display: flex;
   justify-content: space-between;
@@ -526,6 +532,11 @@
   margin: 16px auto;
   max-width: 100%;
   height: auto;
+
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .project_Info {
