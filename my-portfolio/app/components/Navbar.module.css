@@ -167,12 +167,22 @@
     justify-self: center;
     display: inline-block;
     transition: filter 0.3s ease;
+    
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .navbarLogo img {
     width: 60px;
     height: auto;
     display: block;
+
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .logoDark img{

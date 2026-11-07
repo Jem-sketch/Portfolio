@@ -34,6 +34,21 @@ function HomeContent() {
       <button
         className={themeStyles.themeButton}
         onClick={toggleTheme}
+
+        // DISABLING KEYBOARD ON THEME CHANGER BUTTON {violet,13}
+        onKeyDown={(e) => {
+          // Completely disable Space and Enter key triggers on this button
+          if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+            e.preventDefault();
+          }
+        }}
+
+        onKeyUp={(e) => {
+          // Completely disable Space and Enter key triggers on this button
+          if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+            e.preventDefault();
+          }
+        }}
       >
         <img
           src={darkmode ? "/icon-sun.png" : "/icon-moon.png"}
@@ -140,7 +155,7 @@ function HomeContent() {
         {/* PROJECTS */}
         {/* ========================= */}
 
-        <section className={styles.Project_Preview}>
+        <section className={styles.Project_Preview} draggable="false">
           
           <h1 className={`font_style_title`}>PROJECTS</h1>
             
