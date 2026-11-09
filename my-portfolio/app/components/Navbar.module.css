@@ -160,17 +160,14 @@
 }
 
 /* ==========================
-    LOGO (Pure Black to White, White on Hover)
+    LOGO THEME STYLES
 ========================== */
 .navbarLogo {
     position: static;
     justify-self: center;
     display: inline-block;
-    transition: filter 0.3s ease;
-    
+
     -webkit-user-drag: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -180,17 +177,20 @@
     display: block;
 
     -webkit-user-drag: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
-.logoDark img{
-    filter: invert(1);
-}
-.logoWhite img{
+/* Dark Mode: Keeps your native white logo as-is */
+.logoDark img {
     filter: invert(0);
 }
+
+/* Light Mode: Turns your white logo solid black */
+.logoWhite img {
+    filter: invert(1);
+filter: brightness(0) drop-shadow(0 0 0.1px black) drop-shadow(0 0 0.1px black);
+}
+
 /* ==========================
     LAPTOP
 ========================== */
