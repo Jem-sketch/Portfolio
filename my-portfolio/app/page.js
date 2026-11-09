@@ -147,7 +147,6 @@ function HomeContent() {
 
             </div>
           </div>
-
         </section>
 
 
