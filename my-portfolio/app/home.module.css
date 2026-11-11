@@ -429,6 +429,7 @@
 
   z-index: 3;
 
+
   -webkit-user-drag: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -447,7 +448,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
 }
 
 .status_Dot {
@@ -508,6 +509,7 @@
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
   transform-origin: left;      
   transform: scaleX(0);        
+
 }
 
 /* Hover state: changes text color to contrast against the fill background */
@@ -601,6 +603,7 @@
   object-fit: cover;
   border-radius: 10px;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
 }
 
 .card:hover {
