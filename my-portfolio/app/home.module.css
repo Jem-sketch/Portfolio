@@ -429,6 +429,7 @@
 
   z-index: 3;
 
+
   -webkit-user-drag: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -447,7 +448,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
 }
 
 .status_Dot {
@@ -508,6 +509,7 @@
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
   transform-origin: left;      
   transform: scaleX(0);        
+
 }
 
 /* Hover state: changes text color to contrast against the fill background */
@@ -550,6 +552,121 @@
 .project_Info p {
   margin: 0;
 }
+
+
+
+/*CERTIFICATION AND OTHER - SECTION {violet,3}*/
+/* ================================== */
+/* CERTIFICATE AND OTHERS ACHIEVEMENT */
+/* ================================== */
+
+.certificate_Preview{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  padding-bottom: 80px;
+}
+
+.Certificate_overview{
+  max-width: 800px;
+}
+
+.Certificate_overview h1{
+  padding-bottom: 30px;
+}
+
+
+.certificate_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  background-color: rgba(107, 0, 0, 0.92);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.certificate_Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Darkens image slightly on hover so text overlay stands out */
+.card:hover .certificate_Image {
+  filter: brightness(0.6);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(107, 0, 0, 0.92);
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card:hover {
+    box-shadow: 0 8px 16px #000000;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*RESPONSIVE SECTION  {black,3}*/

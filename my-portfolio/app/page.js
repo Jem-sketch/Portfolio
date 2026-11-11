@@ -18,6 +18,8 @@ export default function Home() {
 }
 
 
+
+
 function HomeContent() {
   const { darkmode, toggleTheme } = useTheme();
 
@@ -56,6 +58,12 @@ function HomeContent() {
           className={themeStyles.themeIcon}
         />
       </button>
+
+
+        {/*PROFILE AND SHORT INTRO SECTION {violet,3}*/}
+        {/* =============================  */}
+        {/* PROFILE AND SHORT INTRODUCTION */}
+        {/* =============================  */}
 
         <section className={styles.Profile_Preview}>
           <GridTail />
@@ -96,11 +104,14 @@ function HomeContent() {
           </div>
         </section>
 
+
+        {/*ABOUT/EXPERIENCE SECTION {violet,3}*/}
+        {/* =========================  */}
+        {/* ABOUT ME AND MY EXPERIENCE */}
+        {/* =========================  */}
+        
         <section className={styles.About_Preview}>
 
-          {/* ========================= */}
-          {/* EXPERIENCE */}
-          {/* ========================= */}
           <div className={styles.Experience_overview}>
             <h1 className={`font_style_title`}>EXPERIENCE</h1>
             <hr/>
@@ -149,9 +160,9 @@ function HomeContent() {
           </div>
         </section>
 
-
+        {/*PROJECT SECTION  {violet,3}*/}
         {/* ========================= */}
-        {/* PROJECTS */}
+        {/* PROJECTS SECTION          */}
         {/* ========================= */}
 
         <section className={styles.Project_Preview} draggable="false">
@@ -241,10 +252,81 @@ function HomeContent() {
                   <p className={`font_style_header`}><i>Background Image Remover</i></p>
                 </div>
               </div>
-
             </div>
         </section>
+
+        {/*CERTIFICATION AND OTHER - SECTION     {violet,3}*/}
+        {/* =================================  */}
+        {/* CERTIFICATE AND OTHERS ACHIEVEMENT */}
+        {/* =================================  */}
         
+        <section className={styles.certificate_Preview}>
+          <div className={styles.Certificate_overview}>
+            <h1 className={`font_style_title`}>Certificate</h1>
+
+            <div className={styles.certificate_grid}>
+              {/* Certificate Card 1 */}
+              <div className={styles.card}>
+                <img
+                  src="./sample images (1).jpg"
+                  alt="certificate01"
+                  className={styles.certificate_Image}
+                />
+                <div className={styles.card__content}>
+                  <h3 className={styles.card__title}>Web Development</h3>
+                  <p className={styles.card__description}>
+                    Certified in modern responsive design, HTML, CSS, and frontend framework architecture.
+                  </p>
+                </div>
+              </div>
+
+              {/* Certificate Card 2 */}
+              <div className={styles.card}>
+                <img
+                  src="./sample images (1).jpg"
+                  alt="certificate02"
+                  className={styles.certificate_Image}
+                />
+                <div className={styles.card__content}>
+                  <h3 className={styles.card__title}>UI/UX Design</h3>
+                  <p className={styles.card__description}>
+                    Interactive interface engineering, usability testing, and visual design system mastery.
+                  </p>
+                </div>
+              </div>
+
+              {/* Certificate Card 3 */}
+              <div className={styles.card}>
+                <img
+                  src="./sample images (1).jpg"
+                  alt="certificate03"
+                  className={styles.certificate_Image}
+                />
+                <div className={styles.card__content}>
+                  <h3 className={styles.card__title}>JavaScript Specialist</h3>
+                  <p className={styles.card__description}>
+                    Advanced proficiency in asynchronous programming, ES6+, and DOM manipulation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Certificate Card 4 */}
+              <div className={styles.card}>
+                <img
+                  src="./sample images (1).jpg"
+                  alt="certificate04"
+                  className={styles.certificate_Image}
+                />
+                <div className={styles.card__content}>
+                  <h3 className={styles.card__title}>React Architecture</h3>
+                  <p className={styles.card__description}>
+                    Building modular components, custom hooks, and scalable state management setups.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
